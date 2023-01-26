@@ -1,0 +1,17 @@
+#navbar{
+    flex-direction: column;
+    padding: 0.5rem 0.5rem;
+    overflow: hidden;
+    height: 80px;
+    /* justify-content: center; */
+}
+#education .items {
+    flex-direction: column;
+}
+#content{
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+#certificate .items ol{
+    grid-template-columns: auto;
+}
