@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -399,12 +400,74 @@ body {
 }
 
 #footer {
-  background-color: #333;
-  color: #fff;
-  padding: 2.5rem;
+  min-height: 250px;
+  background-color: rgb(19, 48, 81);
+  color: #f4f4f6;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 4.5rem;
 }
-#footer p {
-  opacity: 0.8;
+#footer .logo {
+  margin: 3rem 0;
+  font-family: "Montserrat", sans-serif;
+}
+#footer .logo p:nth-child(1) {
+  font-size: 2rem;
+  opacity: 1 !important;
+}
+#footer .logo p:nth-child(2) {
+  text-align: right;
+  font-size: 0.8rem;
+}
+#footer .mail-form {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 100;
+  width: 65%;
+}
+#footer .mail-form .info p:nth-child(1) {
+  font-size: 1.8rem;
+}
+#footer .mail-form .info p:nth-child(2) {
+  width: 85%;
+  opacity: 0.7;
+  font-size: 1.4rem;
+}
+#footer .mail-form .form {
+  margin: 2rem 0;
+  display: flex;
+  align-items: center;
+}
+#footer .mail-form .form input {
+  margin: 0.1rem;
+  box-sizing: border-box;
+  border: none;
+  padding: 1rem;
+  height: 3.5rem;
+  font-family: "Montserrat", sans-serif;
+}
+#footer .mail-form .form input:focus {
+  font-size: 1.1rem;
+  font-family: "Poppins", sans-serif;
+  outline: none;
+}
+#footer .mail-form .form input::-moz-placeholder {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.1rem;
+}
+#footer .mail-form .form input:-ms-input-placeholder {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.1rem;
+}
+#footer .mail-form .form input::placeholder {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.1rem;
+}
+#footer .mail-form .form .download-button {
+  font-size: 1.12rem;
+  width: 130px;
+  background: rgb(56, 151, 254);
+  font-family: "Montserrat", sans-serif;
+  color: rgb(244, 244, 246);
 }
 
 #loader {
@@ -562,40 +625,220 @@ body {
 }
 
 #skill {
-  margin-top: 1rem;
-  padding: 0.1rem;
-  background-color: #ddd;
+  background: rgb(19, 48, 81);
+  padding: 0 6.5rem 3rem;
 }
-#skill .header {
-  margin: 1rem;
-  padding: 1.5rem;
-  border-top: 1px outset #062e51;
-  border-bottom: 1px outset #062e51;
+#skill .skill-landing {
+  color: rgb(244, 244, 246);
+  display: flex;
+}
+#skill .skill-landing .landing-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+}
+#skill .skill-landing .landing-left p:nth-child(1) {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.5rem;
+  text-align: start;
+}
+#skill .skill-landing .landing-left p:nth-child(2) {
+  margin-top: 1rem;
+  opacity: 0.6;
+  text-align: start;
+}
+#skill .skill-landing .landing-right {
+  padding: 1rem;
+  width: 50%;
+}
+#skill .skill-landing .landing-right i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#skill .skill-landing .landing-right i img {
+  width: 13rem;
 }
 #skill .items {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-#skill .items .item {
-  font-family: Consolas;
-  font-size: xx-large;
-  border: 1px outset #000;
-  padding: 0.5rem 5rem 0.5rem 5rem;
-  margin: 1rem;
-  border-radius: 10px;
+  padding: 1rem 0;
 }
 #skill .items .item ul {
-  list-style-type: none;
   display: grid;
-  grid-template-columns: auto auto auto auto auto;
-  /* flex-wrap: wrap; */
-  justify-content: space-around;
+  grid-template-columns: 1fr 1fr;
+  list-style-type: none;
 }
 #skill .items .item ul li {
-  /* padding-right: 2rem; */
+  padding: 0.3rem 0.2rem;
   text-align: center;
-  padding: 1rem 2rem;
+}
+#skill .items .item ul li #progress-bar {
+  background-color: #ccc;
+  overflow: hidden;
+  height: 3.5rem;
+  border-radius: 0.1rem;
+  text-align: center;
+}
+#skill .items .item ul li #progress-bar #progress {
+  height: 100%;
+  background: rgb(56, 151, 254);
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+}
+#skill .items .item ul li #progress-bar #progress span {
+  font-family: "Poppins", sans-serif;
+  color: rgb(244, 244, 246);
+}
+#skill .items .item ul li #progress-bar #progress p {
+  font-family: "Poppins", sans-serif;
+  color: rgb(244, 244, 246);
+  font-size: 0.8rem;
+  right: 10px;
+  margin-left: auto;
+}
+@-webkit-keyframes progress-animation {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes progress-animation {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+#comment {
+  padding: 3rem 6.5rem;
+  background: rgb(244, 244, 246);
+}
+#comment .comment-landing {
+  display: flex;
+}
+#comment .comment-landing .landing-left {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#comment .comment-landing .landing-left i img {
+  width: 13rem;
+}
+#comment .comment-landing .landing-right {
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#comment .comment-landing .landing-right p:nth-child(1) {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.5rem;
+  text-align: left;
+}
+#comment .comment-landing .landing-right p:nth-child(2) {
+  margin-top: 1rem;
+  opacity: 0.6;
+  text-align: left;
+}
+#comment .items {
+  margin: 4rem 0;
+  font-family: "Montserrat", sans-serif;
+}
+#comment .items .item {
+  box-shadow: 0 0 10px rgb(36, 36, 44);
+  border-radius: 0.4rem;
+  padding: 1rem 2rem 1rem 0;
+  margin: 1rem 0;
+  display: flex;
+}
+#comment .items .item .c-profile-photo {
+  margin: auto;
+}
+#comment .items .item .c-profile-photo i {
+  display: flex;
+  justify-content: center;
+}
+#comment .items .item .c-profile-photo i img {
+  width: 4rem;
+  height: 4rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 2.5rem;
+  outline: 2px solid #0e5;
+  outline-offset: 0.2rem;
+}
+#comment .items .item .c-profile-photo .c-name {
+  text-align: center;
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+}
+#comment .items .item .c-rate-comment {
+  width: 80%;
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+}
+#comment .items .item .c-rate-comment .c-given-rate {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 1.1rem;
+  border-bottom: 0.1px outset rgba(13, 30, 51, 0.2);
+}
+#comment .items .item .c-rate-comment .c-given-rate p {
+  margin-left: 0.5rem;
+}
+#comment .items .item .c-rate-comment .c-comment {
+  padding: 1rem 0 2rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+#comment .items .item .c-rate-comment .c-comment p {
+  font-size: 1.2rem;
+  font-family: "Poppins", sans-serif;
+}
+
+#work-together {
+  border-top: 1px outset rgba(13, 30, 51, 0.1);
+  padding: 5rem 6.5rem 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom, rgb(244, 244, 246) 50%, rgb(19, 48, 81) 50%);
+}
+#work-together .items {
+  font-family: "Montserrat", sans-serif;
+  padding: 1rem;
+}
+#work-together .items .item:nth-child(1) {
+  opacity: 0.6;
+}
+#work-together .items .item:nth-child(2) p {
+  font-size: 3rem;
+  color: rgb(244, 244, 246);
+  display: flex;
+  align-items: center;
+}
+#work-together .items .item:nth-child(2) p span {
+  display: flex;
+  align-items: center;
+}
+#work-together .items .item:nth-child(2) p span img {
+  margin-left: 1rem;
+  width: 3.5rem;
+}
+#work-together .items:hover {
+  border-bottom: 1px solid #f4f4f6;
+}
+#work-together .items:hover .item:nth-child(1) {
+  opacity: 1;
 }
 
 #chat-box {
