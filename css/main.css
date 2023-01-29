@@ -806,23 +806,24 @@ body {
 }
 
 #work-together {
-  border-top: 1px outset rgba(13, 30, 51, 0.1);
-  padding: 5rem 6.5rem 3rem;
+  margin-top: 1rem;
+  border-bottom: 1px outset rgba(244, 244, 246, 0.4);
+  padding: 1rem 6.5rem 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(to bottom, rgb(244, 244, 246) 50%, rgb(19, 48, 81) 50%);
+  background: rgb(19, 48, 81);
 }
 #work-together .items {
   font-family: "Montserrat", sans-serif;
   padding: 1rem;
+  color: rgb(244, 244, 246);
 }
 #work-together .items .item:nth-child(1) {
   opacity: 0.6;
 }
 #work-together .items .item:nth-child(2) p {
   font-size: 3rem;
-  color: rgb(244, 244, 246);
   display: flex;
   align-items: center;
 }
