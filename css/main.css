@@ -23,6 +23,22 @@ html {
 
 body {
   background: rgb(244, 244, 246);
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+body::-webkit-scrollbar {
+  width: 0.5rem;
+}
+body::-webkit-scrollbar-track {
+  background: linear-gradient(to bottom, rgb(244, 244, 246) 60.4%, rgb(19, 48, 81) 39.6%);
+  border-radius: 0.2rem;
+}
+body::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, rgb(19, 48, 81) 50%, rgb(244, 244, 246) 50%);
+}
+body::-webkit-scrollbar-thumb:hover {
+  background: rgb(56, 151, 254);
 }
 
 #navbar {
@@ -269,8 +285,9 @@ body {
 }
 #education .school-header {
   align-self: flex-start;
-  margin-bottom: 0.5rem;
-  border-bottom: 1px solid rgb(244, 244, 246);
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  margin-bottom: 1.2rem;
 }
 #education .school-general {
   margin: 0 6.5rem;
@@ -353,10 +370,11 @@ body {
   font-family: "Poppins", sans-serif;
 }
 #certificate .certificates-header {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  margin-bottom: 1.2rem;
   display: block;
   align-self: flex-start;
-  margin-bottom: 0.5rem;
-  border-bottom: 1px solid rgb(244, 244, 246);
 }
 #certificate .certificate-general {
   background: rgb(19, 48, 81);
@@ -419,6 +437,9 @@ body {
   text-align: right;
   font-size: 0.8rem;
 }
+#footer .logo span img {
+  width: 1.5rem;
+}
 #footer .mail-form {
   font-family: "Montserrat", sans-serif;
   font-weight: 100;
@@ -464,7 +485,7 @@ body {
 }
 #footer .mail-form .form .download-button {
   font-size: 1.12rem;
-  width: 130px;
+  width: 12rem;
   background: rgb(56, 151, 254);
   font-family: "Montserrat", sans-serif;
   color: rgb(244, 244, 246);
@@ -523,8 +544,9 @@ body {
 #work .work-general .work-info .works-header {
   display: block;
   align-self: flex-start;
-  margin-bottom: 0.5rem;
-  border-bottom: 1px solid rgb(244, 244, 246);
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  margin-bottom: 1.2rem;
 }
 #work .items {
   display: flex;
@@ -685,6 +707,12 @@ body {
   display: flex;
   align-items: center;
   padding: 0 1rem;
+  -webkit-animation-name: progress-animation;
+          animation-name: progress-animation;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-delay: inherit;
+          animation-delay: inherit;
 }
 #skill .items .item ul li #progress-bar #progress span {
   font-family: "Poppins", sans-serif;
@@ -698,19 +726,13 @@ body {
   margin-left: auto;
 }
 @-webkit-keyframes progress-animation {
-  from {
+  0% {
     width: 0%;
-  }
-  to {
-    width: 100%;
   }
 }
 @keyframes progress-animation {
-  from {
+  0% {
     width: 0%;
-  }
-  to {
-    width: 100%;
   }
 }
 
@@ -749,6 +771,27 @@ body {
 #comment .items {
   margin: 4rem 0;
   font-family: "Montserrat", sans-serif;
+  height: 370px;
+  overflow: auto;
+  padding: 0 1rem;
+  overflow-y: scroll;
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+#comment .items::-webkit-scrollbar {
+  width: 0.3rem;
+}
+#comment .items::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 0.2rem;
+}
+#comment .items::-webkit-scrollbar-thumb {
+  background: #777;
+  border-radius: 0.2rem;
+}
+#comment .items::-webkit-scrollbar-thumb:hover {
+  background: rgb(56, 151, 254);
 }
 #comment .items .item {
   box-shadow: 0 0 10px rgb(36, 36, 44);
@@ -805,6 +848,93 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+#contact .landing-section {
+  height: 62.5vh;
+  background: rgb(244, 244, 246);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(19, 48, 81);
+}
+#contact .landing-section .landing-leftside {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+#contact .landing-section .landing-leftside i {
+  width: 450px;
+  height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#contact .landing-section .landing-rightside {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+#contact .landing-section .landing-rightside h3 {
+  font-size: 3.5rem;
+  font-family: "Poppins", sans-serif;
+}
+#contact .contact-form-general {
+  background: rgb(19, 48, 81);
+  padding: 3rem 6.5rem;
+}
+#contact .contact-form-general .contact-form-info {
+  padding: 1rem 0 2rem;
+}
+#contact .contact-form-general .contact-form-info p {
+  color: rgb(244, 244, 246);
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.5rem;
+}
+#contact .contact-form-general .items .item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+#contact .contact-form-general .items .item input {
+  padding: 1rem;
+  margin: 0.3rem 0.1rem;
+  width: 100%;
+  height: 3rem;
+  border: none;
+  box-sizing: border-box;
+  border-radius: 0.2rem;
+}
+#contact .contact-form-general .items .item input:focus {
+  outline: none;
+}
+#contact .contact-form-general .items .item input::-moz-placeholder {
+  font-family: "Poppins", sans-serif;
+}
+#contact .contact-form-general .items .item input:-ms-input-placeholder {
+  font-family: "Poppins", sans-serif;
+}
+#contact .contact-form-general .items .item input::placeholder {
+  font-family: "Poppins", sans-serif;
+}
+#contact .contact-form-general .items .item textarea {
+  margin: 0.3rem 0.1rem;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.2rem;
+  font-family: "Poppins", sans-serif;
+}
+#contact .contact-form-general .items .item #button {
+  margin-left: auto;
+  width: 12rem;
+  background: rgb(56, 151, 254);
+  color: rgb(244, 244, 246);
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+}
+#contact .contact-form-general .items .item #button:hover {
+  background: rgb(244, 244, 246);
+  color: rgb(36, 36, 44);
+}
+
 #work-together {
   margin-top: 1rem;
   border-bottom: 1px outset rgba(244, 244, 246, 0.4);
@@ -837,6 +967,7 @@ body {
 }
 #work-together .items:hover {
   border-bottom: 1px solid #f4f4f6;
+  cursor: pointer;
 }
 #work-together .items:hover .item:nth-child(1) {
   opacity: 1;
