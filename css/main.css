@@ -31,11 +31,11 @@ body::-webkit-scrollbar {
   width: 0.5rem;
 }
 body::-webkit-scrollbar-track {
-  background: linear-gradient(to bottom, rgb(244, 244, 246) 60.4%, rgb(19, 48, 81) 39.6%);
+  background: rgb(244, 244, 246);
   border-radius: 0.2rem;
 }
 body::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, rgb(19, 48, 81) 50%, rgb(244, 244, 246) 50%);
+  background: #999;
 }
 body::-webkit-scrollbar-thumb:hover {
   background: rgb(56, 151, 254);
@@ -44,7 +44,7 @@ body::-webkit-scrollbar-thumb:hover {
 #navbar {
   padding: 0 0.75rem;
   width: auto;
-  height: 70px;
+  min-height: 70px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -87,7 +87,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 #home {
-  height: 100vh;
+  min-height: 100vh;
   background-image: linear-gradient(180deg, #f4f4f6 50%, rgba(19, 48, 81, 0) 50%), url("../images/code-background.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -341,7 +341,7 @@ body::-webkit-scrollbar-thumb:hover {
   margin-top: 0.1rem;
 }
 #certificate .landing-section {
-  height: 62.5vh;
+  height: 50%;
   background: rgb(244, 244, 246);
   display: flex;
   justify-content: center;
@@ -510,7 +510,7 @@ body::-webkit-scrollbar-thumb:hover {
   color: #fff;
 }
 #work .landing-section {
-  height: 62.5vh;
+  height: 50%;
   background: rgb(244, 244, 246);
   display: flex;
   justify-content: center;
@@ -569,6 +569,7 @@ body::-webkit-scrollbar-thumb:hover {
   outline: 1px outset rgb(56, 151, 254);
   padding: 0.5rem 1rem;
   border-radius: 2rem;
+  text-align: center;
 }
 #work .items .category-select ul li:hover {
   background: rgb(244, 244, 246);
@@ -974,29 +975,62 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 #chat-box {
+  font-family: "Montserrat", sans-serif;
   position: fixed;
-  bottom: -400px;
-  right: 60px;
+  bottom: -475px;
+  right: 70px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  width: 300px;
-  height: 400px;
+  width: 325px;
+  height: 450px;
   background-color: #aaa;
   transition: bottom 0.8s;
   border-radius: 0.5rem;
-  border: 1.5px outset #000;
+  box-shadow: 0 0 20px rgb(36, 36, 44);
 }
 #chat-box .header {
+  position: relative;
   display: flex;
-  justify-content: center;
-  letter-spacing: 0.25rem;
-  font-size: 1rem;
+  justify-content: space-between;
   z-index: 1;
   width: 100%;
-  padding: 1rem 0.4rem;
-  background-color: #38f;
-  color: #fff;
+  padding: 1rem 1rem;
+  background-color: rgb(56, 151, 254);
+  color: rgb(244, 244, 246);
+  box-shadow: 0 0 5px rgb(36, 36, 44);
+}
+#chat-box .header h3 {
+  align-self: center;
+  font-size: 1.1rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 10;
+}
+#chat-box .header p {
+  align-self: flex-end;
+  text-align: end;
+  display: flex;
+  flex-direction: column;
+  font-size: 0.6rem;
+}
+#chat-box .header p span {
+  font-size: 0.7rem;
+}
+#chat-box .cross-img {
+  padding: 0 0.3rem;
+  border-radius: 0 0 0 10px;
+  background-color: #0e5;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+#chat-box .cross-img img {
+  width: 0.7rem;
+  height: 0.7rem;
+  margin-left: 0.1rem;
+}
+#chat-box .cross-img:hover {
+  background: orangered;
 }
 #chat-box .message-box {
   background-color: #fff;
@@ -1004,6 +1038,22 @@ body::-webkit-scrollbar-thumb:hover {
   height: 50vh;
   bottom: 0px;
   overflow: auto;
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+#chat-box .message-box::-webkit-scrollbar {
+  width: 0.3rem;
+}
+#chat-box .message-box::-webkit-scrollbar-track {
+  background: rgb(244, 244, 246);
+  border-radius: 0.2rem;
+}
+#chat-box .message-box::-webkit-scrollbar-thumb {
+  background: #999;
+}
+#chat-box .message-box::-webkit-scrollbar-thumb:hover {
+  background: rgb(56, 151, 254);
 }
 #chat-box .message-box .message-bubble {
   list-style-type: none;
@@ -1017,28 +1067,32 @@ body::-webkit-scrollbar-thumb:hover {
   margin-top: 0.1rem;
   margin-left: 0.1rem;
   align-self: flex-start;
-  width: 10rem;
+  max-width: 15rem;
   border-radius: 1rem 1rem 1rem 0.1rem;
   background-color: #0e5;
   color: #fff;
   font-size: small;
   padding: 1rem;
+  box-shadow: 0 0 2px rgb(36, 36, 44);
 }
 #chat-box .message-box .message-bubble .even {
   margin-top: 0.1rem;
   margin-right: 0.1rem;
   align-self: flex-end;
   padding: 1rem;
-  width: 10rem;
+  max-width: 15rem;
   border-radius: 1rem 1rem 0.1rem 1rem;
   background-color: #336ea2;
   color: #fff;
   font-size: small;
+  box-shadow: 0 0 2px rgb(36, 36, 44);
 }
 #chat-box .message-entry {
   display: flex;
+  align-items: center;
 }
 #chat-box .message-entry input {
+  width: 100%;
   font-size: 0.9rem;
   padding: 1.2rem 2rem;
   border: none;
@@ -1048,7 +1102,9 @@ body::-webkit-scrollbar-thumb:hover {
   outline: none;
 }
 #chat-box .message-entry button {
-  width: 100%;
+  background: #eee;
+  height: 100%;
+  width: 4rem;
   border: none;
   padding: 1rem 1rem;
   align-items: center;

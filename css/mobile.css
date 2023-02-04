@@ -2,16 +2,162 @@
     flex-direction: column;
     padding: 0.5rem 0.5rem;
     overflow: hidden;
-    height: 80px;
+    /* height: 80px; */
     /* justify-content: center; */
 }
-#education .items {
+#home #profile{
+    margin-top: 1rem;
     flex-direction: column;
 }
-#content{
-    margin-left: 1rem;
-    margin-right: 1rem;
+#home #profile .name{
+    color:  rgb(244, 244, 246);
 }
+#home #profile .name .links{
+    width: 600px;
+    background: #3fe;
+}
+/* #home #profile .profile-img-box img{
+    max-width: 150px;
+    min-height: 200px;
+} */
+#skill{
+    padding: 0 1rem 3rem;
+}
+#skill .skill-landing .landing-left{
+    width: 100%;
+}
+#skill .skill-landing .landing-right{
+    width: 100%;
+}
+
+#comment{
+    padding: 0 1rem 3rem;
+}
+#comment .items .item{
+    flex-direction: column;
+    
+}
+#comment .items .item .c-rate-comment{
+    flex-direction: row-reverse;
+    width: 100%;
+    padding: 0 2rem;
+}
+#comment .items .item .c-profile-photo{
+    width: 100%;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#education .landing-section{
+    flex-direction: column;
+}
+#education .landing-section .landing-rightside{
+    width: 100%;
+}
+#education .school-general{
+    margin: 20rem 0.5rem 0;
+}
+#education .items{
+    padding: 1rem 0;
+    flex-direction: column;
+}
+
+#certificate .landing-section{
+    flex-direction: column;
+}
+
+#certificate .certificate-general{
+    padding: 2rem 1rem;
+}
+
 #certificate .items ol{
-    grid-template-columns: auto;
+    height: 63.5vh;
+    overflow: auto;
+}
+#certificate .items ol li{
+    width: 100%;
+}
+#work .landing-section{
+    flex-direction: column;
+}
+#work .landing-section .landing-rightside{
+    width: 100%;
+}
+#work .work-general .work-info{
+    padding: 2rem 1rem;
+}
+#work .items{
+    height: 100vh;
+    overflow: auto;
+}
+#work .items a{
+    width: 100%;
+    margin: 0 0.5rem;
+    padding: 0 0.5rem;
+    display: flex;
+    flex-direction: column;
+}
+#work .items a .item{
+    display: flex;
+    flex-direction: column;
+}
+
+#work .items a:nth-child(odd) .item{
+    flex-direction: column;
+}
+#work .items a .item .work-img-box .work-img {
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#footer{
+    flex-direction: column;
+    padding: 1rem 1rem;
+
+}
+#footer .logo{
+    display: none;
+}
+#footer .mail-form{
+    width: 100%;
+}
+#footer .mail-form p:nth-child(2){
+    width: 100%;
+}
+#footer .mail-form .form{
+    flex-direction: column;
+}
+#footer .mail-form .form input{
+    width: 100%;
+}
+#footer .mail-form .form .download-button{
+    margin-left: auto;
+}
+#work-together{
+    padding: 1rem;
 }
