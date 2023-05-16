@@ -36,6 +36,7 @@ html {
 
 body {
     background: $secondary-color;
+    position: relative;
 
     &::-webkit-scrollbar {
         width: 0.5rem;
@@ -59,7 +60,6 @@ body {
         background: $primary-button-color;
     }
 }
-
 
 #navbar {
     padding: 0 0.75rem;
@@ -113,7 +113,144 @@ body {
 
         }
     }
+}
 
+#notification-body {
+    padding: 75px;
+    display: none;
+    justify-content: center;
+    align-items: start;
+    position: absolute;
+    margin: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+#notification-bar {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    background: $tertiary-color;
+    width: 600px;
+    height: 500px;
+    border-radius: 0.5rem;
+    box-shadow: 10px 10px 15px;
+    z-index: 1;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    overflow: hidden;
+    animation-name: notificationBarAnimation;
+    animation-duration: 3s;
+
+    #ntf-title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0.5rem;
+        font-weight: 800;
+
+        img {
+            width: 14rem;
+            height: 10rem;
+        }
+    }
+
+    #ntf-body {
+        font-size: 1rem;
+        font-family: $poppins;
+        padding: 0 1.8rem;
+        font-weight: 100;
+
+        b {
+            font-weight: 900;
+
+            span {
+                color: red;
+                font-size: larger;
+            }
+        }
+    }
+
+    #ntf-footer {
+        #see-you {
+            font-family: $montserrat;
+            font-weight: 600;
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+            padding: 0.5rem 2rem;
+            background: $tertiary-color;
+            border: none;
+            box-shadow: 4px 4px #000;
+
+            &:hover {
+                background: #ddd;
+                box-shadow: inset 4px 4px #000;
+            }
+        }
+    }
+
+    #notification-close {
+        color: white;
+        padding: 0.5rem 1rem;
+        position: absolute;
+        right: 0;
+        background-color: $primary-text-color;
+        border-radius: 0 0 0 1.5rem;
+
+        img {
+            width: 13px;
+        }
+
+        &:hover {
+            background: orangered;
+        }
+    }
+
+    #notification-circle-1 {
+        position: absolute;
+        background: $primary-button-color;
+        border-radius: 100%;
+        top: -10%;
+        left: -5%;
+        z-index: -1;
+        width: 200px;
+        height: 200px;
+    }
+
+    #notification-circle-2 {
+        position: absolute;
+        background: #0e5;
+        border-radius: 100%;
+        right: -10%;
+        bottom: -5%;
+        z-index: -1;
+        width: 300px;
+        height: 300px;
+    }
+
+    #notification-circle-3 {
+        position: absolute;
+        background: orange;
+        border-radius: 100%;
+        left: 20%;
+        bottom: 25%;
+        z-index: -1;
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@keyframes notificationBarAnimation {
+    from {
+        height: 0;
+    }
+
+    to {
+        height: 500px;
+    }
 }
 
 #home {
@@ -132,19 +269,24 @@ body {
     // border-bottom: 3px solid gray;
 
     #profile {
+        margin: 0 5rem;
         display: flex;
-        justify-content: space-evenly;
+        align-items: center;
+        justify-content: center;
 
+        border-left: 1px dashed rgba($color: #999, $alpha: 1.0);
+        border-right: 1px dashed rgba($color: #999, $alpha: 1.0);
+        
         .profile-img-box {
+            margin: 0 3.5rem 0 0;
             padding: 1rem;
+            height: 400px;
             background: $tertiary-color;
             box-shadow: 0 0 10px 0.1px #777;
-            outline: 1px solid $primary-button-color;
-            outline-offset: 0.5rem;
 
             img {
-                max-width: 300px;
-                min-height: 400px;
+                // max-width: 300px;
+                max-height: 350px;
                 object-fit: cover;
             }
         }
@@ -152,7 +294,7 @@ body {
         .name {
             margin: 1rem;
             font-family: $poppins;
-            display: block;
+            display: flex;
             flex-direction: column;
             max-width: 600px;
 
@@ -1247,7 +1389,7 @@ body {
     transition: bottom 0.8s;
     border-radius: 0.5rem;
     box-shadow: 0 0 20px $primary-text-color;
-    
+
 
     & .header {
         position: relative;
@@ -1279,19 +1421,22 @@ body {
             }
         }
     }
-    .cross-img{
+
+    .cross-img {
         padding: 0 0.3rem;
         border-radius: 0 0 0 10px;
         background-color: #0e5;
         position: absolute;
         top: 0;
         right: 0;
-        img{
+
+        img {
             width: 0.7rem;
             height: 0.7rem;
             margin-left: 0.1rem;
         }
-        &:hover{
+
+        &:hover {
             background: orangered;
         }
     }
@@ -1306,20 +1451,20 @@ body {
         &::-webkit-scrollbar {
             width: 0.3rem;
         }
-    
+
         /* Track */
         &::-webkit-scrollbar-track {
             // box-shadow: inset 0 0 5px grey;
             background: $secondary-color;
             border-radius: 0.2rem;
         }
-    
+
         /* Handle */
         &::-webkit-scrollbar-thumb {
             background: #999;
             // border-radius: 0.2rem;
         }
-    
+
         /* Handle on hover */
         &::-webkit-scrollbar-thumb:hover {
             background: $primary-button-color;
